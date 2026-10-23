@@ -65,7 +65,7 @@ const drinks =
     {
         id: 5,
         category: 'Cà phê',
-        name: 'Nhân Chứng Cảm Lặng',
+        name: 'Nhân Chứng Câm Lặng',
         desc: 'Americano',
         price: 45000,
         icon: '☕'
@@ -234,7 +234,8 @@ let cart = {};
 let activeCase = 0;
 const fmt = n => new Intl.NumberFormat('vi-VN').format(n) + 'đ';
 const menuGrid = document.getElementById('menuGrid');
-menuGrid.innerHTML = drinks.map(d => `<article class="drink"><div class="drink-icon">${d.icon}</div><div class="drink-info"><h3>${d.name}</h3><p>${d.desc}</p><div class="drink-bottom"><span class="drink-price">${fmt(d.price)}</span><button class="add" data-add="${d.id}" aria-label="Thêm ${d.name}">+</button></div></div></article>`).join('');
+const categories = [...new Set(drinks.map(d => d.category))];
+menuGrid.innerHTML = categories.map(category => `<section class="menu-category"><h3 class="menu-category-title">${category}</h3><div class="menu-category-grid">${drinks.filter(d=>d.category===category).map(d=>`<article class="drink"><div class="drink-icon">${d.icon}</div><div class="drink-info"><h3>${d.name}</h3><p>${d.desc}</p><div class="drink-bottom"><span class="drink-price">${fmt(d.price)}</span><button class="add" data-add="${d.id}" aria-label="Thêm ${d.name}">+</button></div></div></article>`).join('')}</div></section>`).join('');
 
 function toast(msg) {
     const t = document.getElementById('toast');
@@ -259,11 +260,12 @@ document.getElementById('caseModal').addEventListener('click', e => {
     if (e.target.id === 'caseModal') e.currentTarget.classList.remove('open')
 });
 document.getElementById('caseInterest').addEventListener('click', () => {
+    const c = cases[activeCase];
     document.getElementById('caseModal').classList.remove('open');
-    document.getElementById('booking').scrollIntoView({
-        behavior: 'smooth'
-    });
-    toast('Đã chọn: ' + cases[activeCase].title + ' — hãy kết nối form đặt lịch khi triển khai.')
+    document.getElementById('bookingSelectedCase').textContent = c.no + ' · ' + c.title + ' · ' + c.meta;
+    document.getElementById('bookingStatus').textContent = '';
+    document.getElementById('bookingModal').classList.add('open');
+    document.getElementById('bookingName').focus()
 });
 
 function renderCart() {
@@ -341,9 +343,57 @@ document.getElementById('checkout').addEventListener('click', async () => {
         button.textContent = 'Gửi order đến quầy'
     }
 });
-document.getElementById('bookingBtn').addEventListener('click', () => {
-    toast('Khu vực đặt lịch đã được chừa sẵn — cần kết nối form/email/backend.');
-});
 document.getElementById('menuToggle').addEventListener('click', () => document.getElementById('navlinks').classList.toggle('show'));
 document.querySelectorAll('#navlinks a').forEach(a => a.addEventListener('click', () => document.getElementById('navlinks').classList.remove('show')));
+
+// Set the earliest selectable date to the user's current local date.
+const bookingDateInput = document.getElementById('bookingDate');
+const today = new Date();
+bookingDateInput.min = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+
+document.getElementById('bookingModal').addEventListener('click', e => {
+    if (e.target.id === 'bookingModal') e.currentTarget.classList.remove('open')
+});
+
+document.getElementById('bookingForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    const c = cases[activeCase];
+    const status = document.getElementById('bookingStatus');
+    const button = document.getElementById('submitBooking');
+    status.textContent = 'Đang gửi yêu cầu đặt lịch…';
+    button.disabled = true;
+    button.textContent = 'Đang gửi…';
+
+    const booking = {
+        customer_name: document.getElementById('bookingName').value.trim(),
+        phone: document.getElementById('bookingPhone').value.trim(),
+        booking_date: document.getElementById('bookingDate').value,
+        booking_time: document.getElementById('bookingTime').value,
+        case_no: c.no,
+        case_title: c.title
+    };
+
+    try {
+        const response = await fetch('/api/bookings', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(booking)
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || 'Không gửi được yêu cầu đặt lịch.');
+        status.textContent = data.message || 'Đã gửi yêu cầu. Nhân viên sẽ liên hệ xác nhận.';
+        status.style.color = 'var(--gold)';
+        document.getElementById('bookingForm').reset();
+        toast('Đã gửi yêu cầu đặt lịch thành công.');
+    } catch (error) {
+        status.textContent = error.message || 'Lỗi kết nối máy chủ. Vui lòng thử lại.';
+        status.style.color = 'var(--red2)';
+    } finally {
+        button.disabled = false;
+        button.textContent = 'Gửi yêu cầu đặt lịch ↗';
+    }
+});
+
 renderCart();
