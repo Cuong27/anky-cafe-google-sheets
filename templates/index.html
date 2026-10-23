@@ -10,6 +10,14 @@
 
     <title>Ẩn Ký Café — Mỗi chiếc bàn là một hiện trường</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet"
+    >
+
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -67,7 +75,8 @@
                     </h1>
 
                     <p>
-                        Ẩn Ký Café – Kịch Bản Sát là mô hình quán cà phê kết hợp giữa thưởng thức đồ uống và trải nghiệm trò chơi nhập vai phá án.
+                        Ẩn Ký Café – Kịch Bản Sát là mô hình quán cà phê kết hợp giữa thưởng thức đồ uống và trải nghiệm
+                        trò chơi nhập vai phá án.
                         Lấy cảm hứng từ những vụ án bí ẩn và câu chuyện trinh thám,
                         quán mang đến không gian độc đáo, nơi khách hàng có thể hóa thân thành các nhân vật,
                         thu thập manh mối và tìm ra sự thật thông qua quá trình suy luận.
@@ -255,8 +264,10 @@
                                 Đêm nay, bão tuyết phong tỏa toàn bộ ngọn núi, cắt đứt mọi liên lạc với bên ngoài.
                                 Phía sau cánh cửa gỗ lim dường như đã bị khóa chốt bên trong,
                                 Trần Lão Gia đã trút hơi thở cuối cùng bởi một sợi dây lụa bí ẩn.
-                                Hung thủ đang ngồi ngay tại bàn tròn này và hắn có quyền nói dối để biến các bạn thành kẻ thế mạng!
-                                Liệu sự thật sẽ bước ra ánh sáng, hay sẽ bị chôn vùi vĩnh viễn dưới lớp tuyết trắng đêm nay?
+                                Hung thủ đang ngồi ngay tại bàn tròn này và hắn có quyền nói dối để biến các bạn thành
+                                kẻ thế mạng!
+                                Liệu sự thật sẽ bước ra ánh sáng, hay sẽ bị chôn vùi vĩnh viễn dưới lớp tuyết trắng đêm
+                                nay?
                             </p>
 
                             <div class="meta">
@@ -561,45 +572,36 @@
 
     <!-- BOOKING MODAL -->
     <div class="modal-backdrop" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
-        <div class="modal booking-modal">
-            <button class="close" data-close="bookingModal" aria-label="Đóng form đặt lịch">×</button>
+        <div class="modal">
+            <button class="close" data-close="bookingModal" aria-label="Đóng">×</button>
 
-            <div class="eyebrow">Your next case begins here</div>
-            <h2 id="bookingTitle">Đặt lịch trải nghiệm</h2>
-            <p>Điền thông tin bên dưới. Nhân viên Ẩn Ký Café sẽ liên hệ để xác nhận lịch hẹn.</p>
+            <div class="eyebrow">BOOKING / ĐẶT LỊCH</div>
 
-            <div class="booking-selected-case" id="bookingSelectedCase">Hồ sơ đã chọn</div>
+            <h2 id="bookingTitle">Bắt đầu trải nghiệm</h2>
 
-            <form id="bookingForm" class="booking-form">
-                <div class="form-field">
-                    <label for="bookingName">Tên người đặt</label>
-                    <input id="bookingName" name="customer_name" type="text" autocomplete="name"
-                        maxlength="80" placeholder="Nhập họ tên" required>
-                </div>
+            <p>Hồ sơ mày đã chọn:</p>
+            <p id="bookingSelectedCase"></p>
 
-                <div class="form-field">
-                    <label for="bookingPhone">Số điện thoại</label>
-                    <input id="bookingPhone" name="phone" type="tel" autocomplete="tel"
-                        inputmode="tel" maxlength="24" placeholder="Ví dụ: 09xxxxxxxx" required>
-                </div>
+            <form id="bookingForm">
+                <label for="bookingName">Họ và tên</label>
+                <input id="bookingName" name="customer_name" type="text" maxlength="80" placeholder="Nhập tên của mày"
+                    autocomplete="name" required>
 
-                <div class="booking-grid">
-                    <div class="form-field">
-                        <label for="bookingDate">Ngày muốn đến</label>
-                        <input id="bookingDate" name="booking_date" type="date" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="bookingTime">Giờ muốn đến</label>
-                        <input id="bookingTime" name="booking_time" type="time" step="900" required>
-                    </div>
-                </div>
+                <label for="bookingPhone">Số điện thoại</label>
+                <input id="bookingPhone" name="phone" type="tel" maxlength="24" placeholder="Nhập số điện thoại"
+                    autocomplete="tel" required>
 
-                <p class="booking-status" id="bookingStatus" role="status" aria-live="polite"></p>
+                <label for="bookingDate">Ngày trải nghiệm</label>
+                <input id="bookingDate" name="booking_date" type="date" required>
 
-                <div class="modal-actions">
-                    <button class="btn primary" id="submitBooking" type="submit">Gửi yêu cầu đặt lịch ↗</button>
-                    <button class="btn" type="button" data-close="bookingModal">Để sau</button>
-                </div>
+                <label for="bookingTime">Giờ trải nghiệm</label>
+                <input id="bookingTime" name="booking_time" type="time" required>
+
+                <p id="bookingStatus" role="status" aria-live="polite"></p>
+
+                <button class="btn primary" id="submitBooking" type="submit">
+                    Gửi yêu cầu đặt lịch ↗
+                </button>
             </form>
         </div>
     </div>
