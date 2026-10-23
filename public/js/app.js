@@ -21,7 +21,7 @@ const cases =
 }, {
     no: 'AK—004',
     title: 'Đêm rằm tuyết trắng',
-    desc: 'Cửa khoang khóa từ bên trong, đồng hồ dừng lại và lời khai không khớp. Một thử thách suy luận theo nhóm với nhiều lớp manh mối.',
+    desc: 'Chào mừng các bạn đến với biệt thự họ Trần tại đỉnh Tam Đảo. Đêm nay, bão tuyết phong tỏa toàn bộ ngọn núi, cắt đứt mọi liên lạc với bên ngoài. Phía sau cánh cửa gỗ lim dường như đã bị khóa chốt bên trong, Trần Lão Gia đã trút hơi thở cuối cùng bởi một sợi dây lụa bí ẩn. Hung thủ đang ngồi ngay tại bàn tròn này và hắn có quyền nói dối để biến các bạn thành kẻ thế mạng! Liệu sự thật sẽ bước ra ánh sáng, hay sẽ bị chôn vùi vĩnh viễn dưới lớp tuyết trắng đêm nay?',
     meta: 'Dễ · 5 người · 1–2 tiếng',
     price: '99.000đ/người'
 }
