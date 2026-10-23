@@ -9,21 +9,38 @@ from zoneinfo import ZoneInfo
 
 import requests
 from dotenv import load_dotenv
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, render_template, request, send_from_directory
 
 BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(BASE_DIR / ".env")
 
 # On Vercel, the platform serves files in public/ directly.
 # Locally, Flask serves the same files so URLs /css, /js and /img work at port 8000.
-if os.getenv("VERCEL"):
-    app = Flask(__name__, static_folder=None)
-else:
-    app = Flask(
-        __name__,
-        static_folder=str(BASE_DIR / "public"),
-        static_url_path="",
-    )
+#if os.getenv("VERCEL"):
+#    app = Flask(__name__, static_folder=None)
+#else:
+#    app = Flask(
+#        __name__,
+#        static_folder=str(BASE_DIR / "public"),
+#       static_url_path="",
+#    )
+
+# Khai báo Flask app trực tiếp ở cấp cao nhất
+app = Flask(__name__, static_folder=None)
+
+@app.get("/css/<path:filename>")
+def serve_css(filename):
+    return send_from_directory(BASE_DIR / "public" / "css", filename)
+
+
+@app.get("/js/<path:filename>")
+def serve_js(filename):
+    return send_from_directory(BASE_DIR / "public" / "js", filename)
+
+
+@app.get("/img/<path:filename>")
+def serve_img(filename):
+    return send_from_directory(BASE_DIR / "public" / "img", filename)
 
 VN_TZ = ZoneInfo("Asia/Ho_Chi_Minh")
 
