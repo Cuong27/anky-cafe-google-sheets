@@ -65,7 +65,7 @@ const drinks =
     {
         id: 5,
         category: 'Cà phê',
-        name: 'Nhân Chứng Cảm Lặng',
+        name: 'Nhân Chứng Câm Lặng',
         desc: 'Americano',
         price: 45000,
         icon: '☕'

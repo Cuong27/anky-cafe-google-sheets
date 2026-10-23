@@ -1,22 +1,31 @@
-const cases = [{
+const cases = 
+[
+    {
     no: 'AK—001',
-    title: 'Đêm cuối ở phòng 07',
-    desc: 'Một vị khách được phát hiện đã chết sau bữa tiệc riêng. Sáu người có mặt — và mỗi người đều giấu một điều. Hãy đối chiếu lời khai, dựng lại dòng thời gian và tìm ra mâu thuẫn.',
-    meta: 'Dễ · 2–4 người · 45–60 phút',
-    price: '99.000đ/người'
+    title: 'Vũ điệu dưới trăng',
+    desc: 'Năm 2005, tại bản Nà Pha hẻo lánh thuộc vùng núi Lào Cai, sự mất tích bí ẩn của một cô gái vào đêm trăng sáng đã kéo theo những bí mật bị chôn giấu suốt nhiều năm. Giữa những lời đồn về hồ thiêng và những mối quan hệ đầy toan tính, liệu ai đang nói thật, ai đang che giấu tội lỗi, và sự thật nào sẽ được phơi bày?',
+    meta: 'Khó · 5 người · 3–4 tiếng',
+    price: '199.000đ/người'
 }, {
     no: 'AK—002',
-    title: 'Bức thư không người gửi',
-    desc: 'Một lá thư nặc danh làm sống lại bí mật bị chôn vùi suốt mười năm. Mỗi nhân vật giữ một mảnh sự thật; câu hỏi là ai đang cố điều khiển câu chuyện.',
-    meta: 'Trung bình · 3–6 người · 60–75 phút',
-    price: '129.000đ/người'
+    title: 'Vết cắn lúc nửa đêm',
+    desc: 'Giữa những màn hù dọa và hàng loạt bí mật ngoại tình, lừa tiền, thù hận dần bị phơi bày, ai mới là hung thủ thực sự đằng sau?',
+    meta: 'Trung bình · 6 người · 2–3 tiếng',
+    price: '159.000đ/người'
 }, {
     no: 'AK—003',
-    title: 'Chuyến tàu lúc 23:17',
-    desc: 'Cửa khoang khóa từ bên trong, đồng hồ dừng lại và lời khai không khớp. Một thử thách suy luận theo nhóm với nhiều lớp manh mối.',
-    meta: 'Khó · 4–8 người · 75–90 phút',
+    title: 'Bóng đêm lô cao su',
+    desc: 'Lấy bối cảnh vụ án mạng có thật năm 2015 tại Tây Ninh, trò chơi đưa bạn vào cuộc đối chất sinh tử giữa 4 nghi phạm mang đầy mâu thuẫn tiền bạc và tình cảm với nạn nhân. Ai đang che giấu bí mật đen tối? Ai mới là hung thủ thực sự?',
+    meta: 'Trung bình · 4 người · 2–3 tiếng',
     price: '159.000đ/người'
-}];
+}, {
+    no: 'AK—004',
+    title: 'Đêm rằm tuyết trắng',
+    desc: 'Chào mừng các bạn đến với biệt thự họ Trần tại đỉnh Tam Đảo. Đêm nay, bão tuyết phong tỏa toàn bộ ngọn núi, cắt đứt mọi liên lạc với bên ngoài. Phía sau cánh cửa gỗ lim dường như đã bị khóa chốt bên trong, Trần Lão Gia đã trút hơi thở cuối cùng bởi một sợi dây lụa bí ẩn. Hung thủ đang ngồi ngay tại bàn tròn này và hắn có quyền nói dối để biến các bạn thành kẻ thế mạng! Liệu sự thật sẽ bước ra ánh sáng, hay sẽ bị chôn vùi vĩnh viễn dưới lớp tuyết trắng đêm nay?',
+    meta: 'Dễ · 5 người · 1–2 tiếng',
+    price: '99.000đ/người'
+}
+];
 
 const drinks = 
 [
@@ -331,6 +340,9 @@ document.getElementById('checkout').addEventListener('click', async () => {
         button.disabled = false;
         button.textContent = 'Gửi order đến quầy'
     }
+});
+document.getElementById('bookingBtn').addEventListener('click', () => {
+    toast('Khu vực đặt lịch đã được chừa sẵn — cần kết nối form/email/backend.');
 });
 document.getElementById('menuToggle').addEventListener('click', () => document.getElementById('navlinks').classList.toggle('show'));
 document.querySelectorAll('#navlinks a').forEach(a => a.addEventListener('click', () => document.getElementById('navlinks').classList.remove('show')));

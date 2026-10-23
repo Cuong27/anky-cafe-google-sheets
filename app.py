@@ -15,8 +15,8 @@ load_dotenv(BASE_DIR / ".env")
 
 app = Flask(
     __name__
-    #,static_folder=str(BASE_DIR / "public"),
-    #static_url_path=""
+    ,static_folder=str(BASE_DIR / "public"),
+    static_url_path=""
 )
 
 # ==================================================
@@ -30,7 +30,7 @@ MENU = {
     2: ("Lời Khai Ngọt Ngào", 40000),
     3: ("Lời Khai Nửa Thật", 40000),
     4: ("Dấu Vết Cuối Cùng", 45000),
-    5: ("Nhân Chứng Cảm Lặng", 45000),
+    5: ("Nhân Chứng Câm Lặng", 45000),
     6: ("Kẻ Hai Mặt", 45000),
 
     # Trà sữa
