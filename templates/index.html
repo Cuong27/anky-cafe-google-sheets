@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#15110f">
+    <meta name="description"
+        content="Ẩn Ký Café — nhâm nhi một ly cà phê, nhập vai phá án và lần theo những bí mật chưa được kể.">
+
+    <title>Ẩn Ký Café — Mỗi chiếc bàn là một hiện trường</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="topline"></div>
+
+    <!-- NAVIGATION -->
+    <header class="nav">
+        <div class="wrap navin">
+
+            <a class="brand" href="#home" aria-label="Ẩn Ký Café trang chủ">
+                <img src="/img/anky-logo.png" alt="Logo Ẩn Ký Café">
+                <span>ẨN KÝ <span style="color:var(--red2)">CAFÉ</span></span>
+            </a>
+
+            <nav class="navlinks" id="navlinks">
+                <a href="#cases">HỒ SƠ VỤ ÁN</a>
+                <a href="#experience">TRẢI NGHIỆM</a>
+                <a href="#menu">THỰC ĐƠN</a>
+                <a href="#insight">GÓC HỒ SƠ</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="cartbtn" id="openCart">
+                    ☕ Giỏ hàng <span id="cartCount">0</span>
+                </button>
+
+                <button class="btn primary" onclick="document.querySelector('#cases').scrollIntoView()">
+                    Chọn vụ án ↗
+                </button>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Mở menu">
+                    ☰
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main id="home">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-art"></div>
+
+            <div class="wrap">
+                <div class="hero-copy">
+                    <div class="eyebrow">
+                        Café · Mystery roleplay · True crime
+                    </div>
+
+                    <h1>
+                        Mỗi chiếc bàn<br>
+                        là một <span class="red">hiện trường.</span>
+                    </h1>
+
+                    <p>
+                        Một quán cà phê dành cho những tâm trí tò mò.
+                        Gọi món bạn thích, nhận hồ sơ vụ án, nhập vai nhân
+                        chứng hoặc điều tra viên — và tìm ra sự thật trước
+                        khi thời gian cạn.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a class="btn primary" href="#cases">
+                            Khám phá hồ sơ án ↗
+                        </a>
+
+                        <a class="btn" href="#experience">
+                            Cách chơi như thế nào?
+                        </a>
+                    </div>
+
+                    <div class="micro">
+                        Quan sát kỹ · Đặt câu hỏi · Đừng tin mọi lời khai
+                    </div>
+                </div>
+
+                <div class="stamp">
+                    SỰ THẬT
+                    <span>LUÔN CÓ CÁI GIÁ</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- TICKER -->
+        <div class="ticker">
+            <span>✦ Mật án trong tách cà phê</span>
+            <span>✦ Mỗi manh mối đều có lý do</span>
+            <span>✦ Bạn sẽ tin ai?</span>
+            <span>✦ Mật án trong tách cà phê</span>
+        </div>
+
+        <!-- CASES -->
+        <section class="section" id="cases">
+            <div class="wrap">
+
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">The case files / 001—003</div>
+                        <h2>
+                            Chọn hồ sơ.<br>
+                            <span class="red">Bắt đầu điều tra.</span>
+                        </h2>
+                    </div>
+
+                    <p>
+                        Mỗi kịch bản là một câu chuyện trinh thám tương tác.
+                        Thu thập bằng chứng, đối chiếu lời khai và cùng
+                        đồng đội đưa ra kết luận.
+                    </p>
+                </div>
+
+                <div class="cards">
+
+                    <!-- CASE 1 -->
+                    <article class="case-card">
+                        <div class="case-top">
+                            <span class="tag">Khó · 5 người</span>
+                            <div class="case-symbol">01</div>
+                            <span class="case-no">HỒ SƠ AK—001</span>
+                        </div>
+
+                        <div class="case-body">
+                            <h3>Vũ điệu dưới ánh trăng</h3>
+
+                            <p>
+                                Năm 2005, tại bản Nà Pha hẻo lánh thuộc vùng núi Lào Cai,
+                                sự mất tích bí ẩn của một cô gái vào đêm trăng sáng đã kéo theo những bí mật bị chôn
+                                giấu suốt nhiều năm.
+                                Giữa những lời đồn về hồ thiêng và những mối quan hệ đầy toan tính,
+                                liệu ai đang nói thật, ai đang che giấu tội lỗi, và sự thật nào sẽ được phơi bày?
+                            </p>
+
+                            <div class="meta">
+                                <span>◷ 3–4 tiếng</span>
+                                <span>⌕ T</span>
+                            </div>
+
+                            <div class="card-foot">
+                                <span class="price">
+                                    Từ 199.000đ
+                                    <span style="font:11px var(--sans);color:var(--muted)">
+                                        /người
+                                    </span>
+                                </span>
+
+                                <button class="textbtn" data-case="0">
+                                    Mở hồ sơ ↗
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CASE 2 -->
+                    <article class="case-card">
+                        <div class="case-top">
+                            <span class="tag">Trung bình · 6 người</span>
+                            <div class="case-symbol">02</div>
+                            <span class="case-no">HỒ SƠ AK—002</span>
+                        </div>
+
+                        <div class="case-body">
+                            <h3>Vết cắn lúc nửa đêm</h3>
+
+                            <p>
+                                Giữa những màn hù dọa và hàng loạt bí mật ngoại tình,
+                                lừa tiền, thù hận dần bị phơi bày,
+                                ai mới là hung thủ thực sự đằng sau?
+                            </p>
+
+                            <div class="meta">
+                                <span>◷ 2–3 tiếng</span>
+                                <span>⌕ Phân tích</span>
+                            </div>
+
+                            <div class="card-foot">
+                                <span class="price">
+                                    Từ 159.000đ
+                                    <span style="font:11px var(--sans);color:var(--muted)">
+                                        /người
+                                    </span>
+                                </span>
+
+                                <button class="textbtn" data-case="1">
+                                    Mở hồ sơ ↗
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CASE 3 -->
+                    <article class="case-card">
+                        <div class="case-top">
+                            <span class="tag">Dễ · 4–8 người</span>
+                            <div class="case-symbol">03</div>
+                            <span class="case-no">HỒ SƠ AK—003</span>
+                        </div>
+
+                        <div class="case-body">
+                            <h3>Bóng đêm lô cao su</h3>
+
+                            <p>
+                                Lấy bối cảnh vụ án mạng có thật năm 2015 tại Tây Ninh, 
+                                trò chơi đưa bạn vào cuộc đối chất sinh tử giữa 4 nghi phạm 
+                                mang đầy mâu thuẫn tiền bạc và tình cảm với nạn nhân. 
+                                Ai đang che giấu bí mật đen tối? Ai mới là hung thủ thực sự?
+                            </p>
+
+                            <div class="meta">
+                                <span>◷ 2–3 tiếng</span>
+                                <span>⌕ Phá án nhóm</span>
+                            </div>
+
+                            <div class="card-foot">
+                                <span class="price">
+                                    Từ 129.000đ
+                                    <span style="font:11px var(--sans);color:var(--muted)">
+                                        /người
+                                    </span>
+                                </span>
+
+                                <button class="textbtn" data-case="2">
+                                    Mở hồ sơ ↗
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!--Case 4-->
+                    <article class="case-card">
+                        <div class="case-top">
+                            <span class="tag">Dễ · 3–6 người</span>
+                            <div class="case-symbol">04</div>
+                            <span class="case-no">HỒ SƠ AK—004</span>
+                        </div>
+
+                        <div class="case-body">
+                            <h3>Đêm rằm tuyết trắng</h3>
+
+                            <p>
+                                Một căn phòng bị khóa từ bên trong, một vật chứng biến mất
+                                và bốn lời khai mâu thuẫn. Ai đang che giấu sự thật?
+                            </p>
+
+                            <div class="meta">
+                                <span>◷ 2–3 tiếng</span>
+                                <span>⌕ Phá án nhóm</span>
+                            </div>
+
+                            <div class="card-foot">
+                                <span class="price">
+                                    Từ 129.000đ
+                                    <span style="font:11px var(--sans);color:var(--muted)">
+                                        /người
+                                    </span>
+                                </span>
+
+                                <button class="textbtn" data-case="3">
+                                    Mở hồ sơ ↗
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="order-note"></p>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="section how" id="experience">
+            <div class="wrap">
+
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">Your role, your story</div>
+                        <h2>
+                            Không chỉ đọc truyện.<br>
+                            <span class="red">Bạn ở trong vụ án.</span>
+                        </h2>
+                    </div>
+
+                    <p>
+                        Trải nghiệm nhập vai được thiết kế để ai cũng có thể
+                        tham gia — kể cả người lần đầu chơi mystery game.
+                    </p>
+                </div>
+
+                <div class="steps">
+
+                    <div class="step">
+                        <div class="step-num">01</div>
+                        <h3>Nhận vai</h3>
+                        <p>
+                            Chọn nhân vật, đọc mục tiêu bí mật và nắm thông
+                            tin riêng của mình.
+                        </p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">02</div>
+                        <h3>Khám nghiệm</h3>
+                        <p>
+                            Mở phong bì manh mối, xem vật chứng và tìm
+                            những chi tiết bất thường.
+                        </p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">03</div>
+                        <h3>Thẩm vấn</h3>
+                        <p>
+                            Trao đổi với người chơi khác, chất vấn lời khai
+                            và ghép nối dòng thời gian.
+                        </p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-num">04</div>
+                        <h3>Phá án</h3>
+                        <p>
+                            Trình bày giả thuyết, chỉ ra động cơ và cùng
+                            nhau mở đáp án cuối.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MENU -->
+        <section class="section" id="menu">
+            <div class="wrap">
+
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">Brewed for investigators</div>
+                        <h2>
+                            Tiếp năng lượng.<br>
+                            <span class="red">Giữ đầu óc tỉnh táo.</span>
+                        </h2>
+                    </div>
+
+                    <p></p>
+                </div>
+
+                <!-- app.js tự render danh sách món vào đây -->
+                <div class="menu-grid" id="menuGrid"></div>
+
+                <p class="order-note"></p>
+            </div>
+        </section>
+
+        <!-- INSIGHT -->
+        <section class="section insight" id="insight">
+            <div class="wrap">
+
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">Case notes / The real world</div>
+                        <h2>
+                            Hồ sơ có thật.<br>
+                            <span class="red">Những câu hỏi còn lại.</span>
+                        </h2>
+                    </div>
+
+                    <p>
+                        Góc đọc về các vụ án có thật, tiến trình điều tra,
+                        chứng cứ và những bài học từ sai sót trong suy luận.
+                    </p>
+                </div>
+
+                <div class="insight-grid">
+
+                    <article class="insight-main">
+                        <div>
+                            <span class="placeholder">
+                                Khu vực nội dung · Có thể mở rộng
+                            </span>
+
+                            <h3>
+                                Một vụ án. Nhiều giả thuyết.
+                                Chỉ chứng cứ mới có tiếng nói cuối cùng.
+                            </h3>
+
+                            <p>
+                                Không giật gân hóa nạn nhân. Không biến suy
+                                đoán thành sự thật. Mỗi bài viết cần phân biệt
+                                rõ dữ kiện đã xác minh, nhận định và những
+                                điểm còn tranh cãi.
+                            </p>
+                        </div>
+
+                        <a href="mailto:hello@anky.cafe?subject=G%C3%B3p%20%C3%BD%20g%C3%B3c%20h%E1%BB%93%20s%C6%A1"
+                            class="textbtn">
+                            Đề xuất chủ đề ↗
+                        </a>
+                    </article>
+
+                    <div class="insight-side">
+
+                        <article class="insight-mini">
+                            <span class="case-no">INSIGHT / 001</span>
+
+                            <h3>Dấu vết và chuỗi bảo quản chứng cứ</h3>
+
+                            <p>
+                                Giới thiệu cách thu thập, ghi nhận và bảo
+                                quản vật chứng — cùng lý do một chi tiết nhỏ
+                                có thể làm thay đổi hướng điều tra.
+                            </p>
+
+                            <span class="placeholder" style="margin-top:15px">
+                                Chừa chỗ cho bài viết
+                            </span>
+                        </article>
+
+                        <article class="insight-mini">
+                            <span class="case-no">INSIGHT / 002</span>
+
+                            <h3>Thiên kiến xác nhận trong phá án</h3>
+
+                            <p>
+                                Khi đã tin một giả thuyết, con người dễ chỉ
+                                nhìn thấy điều củng cố nó. Làm sao để đặt câu
+                                hỏi đúng?
+                            </p>
+
+                            <span class="placeholder" style="margin-top:15px">
+                                Chừa chỗ cho bài viết
+                            </span>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MANIFESTO -->
+        <section class="section">
+            <div class="wrap manifesto">
+
+                <div class="manifesto-mark">
+                    <img src="/img/anky-logo.png" alt="Huy hiệu Ẩn Ký Café">
+                </div>
+
+                <div>
+                    <div class="eyebrow">Triết lý của Ẩn Ký</div>
+
+                    <h2>
+                        “Sự thật không tự lên tiếng.
+                        <span class="red">Ta phải biết cách lắng nghe.</span>”
+                    </h2>
+
+                    <p>
+                        Ẩn Ký Café là nơi giao nhau giữa văn hóa cà phê,
+                        kể chuyện tương tác và tư duy phản biện. Không cần
+                        là thám tử chuyên nghiệp — chỉ cần tò mò, biết lắng
+                        nghe và sẵn sàng đổi ý khi có chứng cứ mới.
+                    </p>
+
+                    <div class="quote">
+                        Một lời khai có thể đánh lừa bạn.
+                        Một manh mối có thể đánh lừa tất cả.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta" id="booking">
+            <div class="wrap">
+                <div class="eyebrow">The case is waiting</div>
+
+                <h2>
+                    Chuyện chưa kể,án chưa tàn
+                    Một tách cà phê,vô vàn manh mối
+                </h2>
+
+                <p>
+                    Rủ nhóm bạn, chọn hồ sơ và thử xem ai là người nhìn ra
+                    sự thật đầu tiên.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="wrap footer-in">
+
+            <a class="brand" href="#home">
+                <img src="/img/anky-logo.png" alt="">
+
+                <span>
+                    ẨN KÝ
+                    <span style="color:var(--red2)">CAFÉ</span>
+                </span>
+            </a>
+
+            <small>© 2026 Ẩn Ký Café</small>
+
+            <div class="footer-links">
+                <a href="#cases">Hồ sơ án</a>
+                <a href="#menu">Thực đơn</a>
+                <a href="#insight">Góc hồ sơ</a>
+                <a href="mailto:hello@anky.cafe">Liên hệ</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- CASE MODAL -->
+    <div class="modal-backdrop" id="caseModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+
+        <div class="modal">
+            <button class="close" data-close="caseModal" aria-label="Đóng">×</button>
+
+            <div class="eyebrow" id="modalEyebrow">
+                Hồ sơ mật
+            </div>
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalDesc"></p>
+
+            <div class="meta" id="modalMeta"></div>
+
+            <div class="modal-actions">
+                <button class="btn primary" id="caseInterest">
+                    Tôi muốn chơi ↗
+                </button>
+
+                <button class="btn" data-close="caseModal">
+                    Đóng hồ sơ
+                </button>
+            </div>
+
+            <p style="font-size:11px;margin:18px 0 0"></p>
+        </div>
+    </div>
+
+    <!-- CART -->
+    <aside class="cart-panel" id="cartPanel" aria-label="Giỏ hàng">
+
+        <div class="cart-head">
+            <h2>Order tại Ẩn Ký</h2>
+
+            <button class="close" id="closeCart" aria-label="Đóng giỏ">×</button>
+        </div>
+
+        <div class="cart-items" id="cartItems"></div>
+
+        <div class="cart-total">
+
+            <div>
+                <span>Tạm tính</span>
+                <strong id="cartTotal">0đ</strong>
+            </div>
+
+            <input id="customerName" placeholder="Tên người đặt (tùy chọn)" maxlength="60">
+
+            <input id="tableNumber" placeholder="Mã bàn (bắt buộc nếu tại bàn)" maxlength="20">
+
+            <select id="orderType" aria-label="Loại đơn hàng">
+                <option value="Tại bàn">Tại bàn</option>
+                <option value="Take away">Take away</option>
+            </select>
+
+            <button class="btn primary" style="width:100%" id="checkout">
+                Gửi order đến quầy
+            </button>
+
+            <small style="display:block;color:var(--muted);margin-top:10px"></small>
+
+        </div>
+    </aside>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast" role="status"></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="/js/app.js" defer></script>
+
+</body>
+
+</html>
