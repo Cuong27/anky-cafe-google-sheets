@@ -19,14 +19,14 @@ load_dotenv(BASE_DIR / ".env")
 #if os.getenv("VERCEL"):
 #    app = Flask(__name__, static_folder=None)
 #else:
-#    app = Flask(
-#        __name__,
-#        static_folder=str(BASE_DIR / "public"),
-#       static_url_path="",
-#    )
+app = Flask(
+        __name__,
+        static_folder=str(BASE_DIR / "public"),
+       static_url_path="",
+    )
 
 # Khai báo Flask app trực tiếp ở cấp cao nhất
-app = Flask(__name__, static_folder=None)
+#app = Flask(__name__, static_folder=None)
 
 @app.get("/css/<path:filename>")
 def serve_css(filename):

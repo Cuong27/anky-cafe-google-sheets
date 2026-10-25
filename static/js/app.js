@@ -20,8 +20,8 @@ const cases =
     price: '159.000đ/người'
 }, {
     no: 'AK—004',
-    title: 'Đêm rằm tuyết trắng',
-    desc: 'Chào mừng các bạn đến với biệt thự họ Trần tại đỉnh Tam Đảo. Đêm nay, bão tuyết phong tỏa toàn bộ ngọn núi, cắt đứt mọi liên lạc với bên ngoài. Phía sau cánh cửa gỗ lim dường như đã bị khóa chốt bên trong, Trần Lão Gia đã trút hơi thở cuối cùng bởi một sợi dây lụa bí ẩn. Hung thủ đang ngồi ngay tại bàn tròn này và hắn có quyền nói dối để biến các bạn thành kẻ thế mạng! Liệu sự thật sẽ bước ra ánh sáng, hay sẽ bị chôn vùi vĩnh viễn dưới lớp tuyết trắng đêm nay?',
+    title: 'Đêm rằm giông bão',
+    desc: 'Đêm rằm tháng Chạp, trận giông bão mù trời cô lập hoàn toàn căn biệt thự cổ kính trên đỉnh Tam Đảo, cũng là lúc Ông Hưng – Chủ tịch Tập đoàn Thế Hưng – bị sát hại dã man trong phòng làm việc khóa trái ở tầng 2. Giữa hiện trường mật thất không vết tích, 5 con người hiện diện đêm đó đều sở hữu động cơ giết người sục sôi, vậy ai mới chính là hung thủ thực sự của vụ án này?',
     meta: 'Dễ · 5 người · 1–2 tiếng',
     price: '99.000đ/người'
 }

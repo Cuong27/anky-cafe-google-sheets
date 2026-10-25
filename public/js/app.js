@@ -20,8 +20,8 @@ const cases =
     price: '159.000đ/người'
 }, {
     no: 'AK—004',
-    title: 'Đêm rằm tuyết trắng',
-    desc: 'Chào mừng các bạn đến với biệt thự họ Trần tại đỉnh Tam Đảo. Đêm nay, bão tuyết phong tỏa toàn bộ ngọn núi, cắt đứt mọi liên lạc với bên ngoài. Phía sau cánh cửa gỗ lim dường như đã bị khóa chốt bên trong, Trần Lão Gia đã trút hơi thở cuối cùng bởi một sợi dây lụa bí ẩn. Hung thủ đang ngồi ngay tại bàn tròn này và hắn có quyền nói dối để biến các bạn thành kẻ thế mạng! Liệu sự thật sẽ bước ra ánh sáng, hay sẽ bị chôn vùi vĩnh viễn dưới lớp tuyết trắng đêm nay?',
+    title: 'Đêm rằm giông bão',
+    desc: 'Đêm rằm tháng Chạp, trận giông bão mù trời cô lập hoàn toàn căn biệt thự cổ kính trên đỉnh Tam Đảo, cũng là lúc Ông Hưng – Chủ tịch Tập đoàn Thế Hưng – bị sát hại dã man trong phòng làm việc khóa trái ở tầng 2. Giữa hiện trường mật thất không vết tích, 5 con người hiện diện đêm đó đều sở hữu động cơ giết người sục sôi, vậy ai mới chính là hung thủ thực sự của vụ án này?',
     meta: 'Dễ · 5 người · 1–2 tiếng',
     price: '99.000đ/người'
 }
@@ -259,18 +259,13 @@ document.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click
 document.getElementById('caseModal').addEventListener('click', e => {
     if (e.target.id === 'caseModal') e.currentTarget.classList.remove('open')
 });
-
 document.getElementById('caseInterest').addEventListener('click', () => {
     const c = cases[activeCase];
-
     document.getElementById('caseModal').classList.remove('open');
-
-    document.getElementById('bookingSelectedCase').textContent =
-        `${c.no} · ${c.title} · ${c.meta}`;
-
+    document.getElementById('bookingSelectedCase').textContent = c.no + ' · ' + c.title + ' · ' + c.meta;
     document.getElementById('bookingStatus').textContent = '';
     document.getElementById('bookingModal').classList.add('open');
-    document.getElementById('bookingName').focus();
+    document.getElementById('bookingName').focus()
 });
 
 function renderCart() {
@@ -353,24 +348,21 @@ document.querySelectorAll('#navlinks a').forEach(a => a.addEventListener('click'
 
 // Set the earliest selectable date to the user's current local date.
 const bookingDateInput = document.getElementById('bookingDate');
-
-const now = new Date();
-bookingDateInput.min = new Date(
-    now.getTime() - now.getTimezoneOffset() * 60000
-).toISOString().slice(0, 10);
+const today = new Date();
+bookingDateInput.min = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
 
 document.getElementById('bookingModal').addEventListener('click', e => {
-    if (e.target.id === 'bookingModal') {
-        e.currentTarget.classList.remove('open');
-    }
+    if (e.target.id === 'bookingModal') e.currentTarget.classList.remove('open')
 });
 
 document.getElementById('bookingForm').addEventListener('submit', async e => {
     e.preventDefault();
-
     const c = cases[activeCase];
     const status = document.getElementById('bookingStatus');
     const button = document.getElementById('submitBooking');
+    status.textContent = 'Đang gửi yêu cầu đặt lịch…';
+    button.disabled = true;
+    button.textContent = 'Đang gửi…';
 
     const booking = {
         customer_name: document.getElementById('bookingName').value.trim(),
@@ -381,9 +373,6 @@ document.getElementById('bookingForm').addEventListener('submit', async e => {
         case_title: c.title
     };
 
-    status.textContent = 'Đang gửi yêu cầu đặt lịch…';
-    button.disabled = true;
-
     try {
         const response = await fetch('/api/bookings', {
             method: 'POST',
@@ -392,22 +381,18 @@ document.getElementById('bookingForm').addEventListener('submit', async e => {
             },
             body: JSON.stringify(booking)
         });
-
         const data = await response.json();
-
-        if (!response.ok) {
-            throw new Error(data.error || 'Không gửi được yêu cầu đặt lịch.');
-        }
-
-        status.textContent =
-            data.message || 'Đã gửi yêu cầu. Nhân viên sẽ liên hệ xác nhận.';
-
+        if (!response.ok) throw new Error(data.error || 'Không gửi được yêu cầu đặt lịch.');
+        status.textContent = data.message || 'Đã gửi yêu cầu. Nhân viên sẽ liên hệ xác nhận.';
+        status.style.color = 'var(--gold)';
         document.getElementById('bookingForm').reset();
+        toast('Đã gửi yêu cầu đặt lịch thành công.');
     } catch (error) {
-        status.textContent =
-            error.message || 'Lỗi kết nối máy chủ. Vui lòng thử lại.';
+        status.textContent = error.message || 'Lỗi kết nối máy chủ. Vui lòng thử lại.';
+        status.style.color = 'var(--red2)';
     } finally {
         button.disabled = false;
+        button.textContent = 'Gửi yêu cầu đặt lịch ↗';
     }
 });
 
