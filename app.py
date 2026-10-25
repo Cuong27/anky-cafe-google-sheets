@@ -49,10 +49,10 @@ MENU = {
     1: ("Hồ Sơ Đen", 35000),
     2: ("Lời Khai Ngọt Ngào", 40000),
     3: ("Lời Khai Nửa Thật", 40000),
-    4: ("Dấu Vết Cuối Cùng", 45000),
+    4: ("Dấu Vết Cuối Cùng", 50000),
     5: ("Nhân Chứng Cảm Lặng", 45000),
     6: ("Kẻ Hai Mặt", 45000),
-    7: ("Lời Khai Ban Đầu", 45000),
+    7: ("Lời Khai Ban Đầu", 50000),
     8: ("Bí Mật Hắc Ám", 45000),
     9: ("Mật Mã Hoa Hồng", 55000),
     10: ("Lớp Mặt Nạ", 55000),
@@ -64,14 +64,11 @@ MENU = {
     16: ("Khẩu Cung", 50000),
     17: ("Dấu Vân Tay", 50000),
     18: ("Vùng Cấm", 50000),
-    19: ("Tang Chứng", 50000),
-    20: ("Đồng Phạm", 50000),
-    21: ("Manh Mối Giả", 50000),
-    22: ("Nhân Chứng Đỏ", 50000),
-    23: ("Hiện Trường Vụ Án", 50000),
-    24: ("Kẻ Đứng Sau", 50000),
+    19: ("Hạt Hướng Dương", 20000),
+    20: ("Khô Bò", 25000),
+    21: ("Khô Gà", 25000),
+    22: ("Snacks", 15000),
 }
-
 
 def parse_integer(value):
     """Accept integers or digit-only strings; reject bools, floats and blanks."""

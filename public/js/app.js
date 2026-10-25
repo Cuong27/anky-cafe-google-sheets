@@ -1,241 +1,225 @@
-const cases = 
-[
-    {
-    no: 'AK—001',
-    title: 'Vũ điệu dưới trăng',
-    desc: 'Năm 2005, tại bản Nà Pha hẻo lánh thuộc vùng núi Lào Cai, sự mất tích bí ẩn của một cô gái vào đêm trăng sáng đã kéo theo những bí mật bị chôn giấu suốt nhiều năm. Giữa những lời đồn về hồ thiêng và những mối quan hệ đầy toan tính, liệu ai đang nói thật, ai đang che giấu tội lỗi, và sự thật nào sẽ được phơi bày?',
-    meta: 'Khó · 5 người · 3–4 tiếng',
-    price: '199.000đ/người'
-}, {
-    no: 'AK—002',
-    title: 'Vết cắn lúc nửa đêm',
-    desc: 'Giữa những màn hù dọa và hàng loạt bí mật ngoại tình, lừa tiền, thù hận dần bị phơi bày, ai mới là hung thủ thực sự đằng sau?',
-    meta: 'Trung bình · 6 người · 2–3 tiếng',
-    price: '159.000đ/người'
-}, {
-    no: 'AK—003',
-    title: 'Bóng đêm lô cao su',
-    desc: 'Lấy bối cảnh vụ án mạng có thật năm 2015 tại Tây Ninh, trò chơi đưa bạn vào cuộc đối chất sinh tử giữa 4 nghi phạm mang đầy mâu thuẫn tiền bạc và tình cảm với nạn nhân. Ai đang che giấu bí mật đen tối? Ai mới là hung thủ thực sự?',
-    meta: 'Trung bình · 4 người · 2–3 tiếng',
-    price: '159.000đ/người'
-}, {
-    no: 'AK—004',
-    title: 'Đêm rằm giông bão',
-    desc: 'Đêm rằm tháng Chạp, trận giông bão mù trời cô lập hoàn toàn căn biệt thự cổ kính trên đỉnh Tam Đảo, cũng là lúc Ông Hưng – Chủ tịch Tập đoàn Thế Hưng – bị sát hại dã man trong phòng làm việc khóa trái ở tầng 2. Giữa hiện trường mật thất không vết tích, 5 con người hiện diện đêm đó đều sở hữu động cơ giết người sục sôi, vậy ai mới chính là hung thủ thực sự của vụ án này?',
-    meta: 'Dễ · 5 người · 1–2 tiếng',
-    price: '99.000đ/người'
-}
-];
+const cases =
+    [
+        {
+            no: 'AK—001',
+            title: 'Vũ điệu dưới trăng',
+            desc: 'Năm 2005, tại bản Nà Pha hẻo lánh thuộc vùng núi Lào Cai, sự mất tích bí ẩn của một cô gái vào đêm trăng sáng đã kéo theo những bí mật bị chôn giấu suốt nhiều năm. Giữa những lời đồn về hồ thiêng và những mối quan hệ đầy toan tính, liệu ai đang nói thật, ai đang che giấu tội lỗi, và sự thật nào sẽ được phơi bày?',
+            meta: 'Khó · 5 người · 3–4 tiếng',
+            price: '199.000đ/người'
+        }, {
+            no: 'AK—002',
+            title: 'Vết cắn lúc nửa đêm',
+            desc: 'Giữa những màn hù dọa và hàng loạt bí mật ngoại tình, lừa tiền, thù hận dần bị phơi bày, ai mới là hung thủ thực sự đằng sau?',
+            meta: 'Trung bình · 6 người · 2–3 tiếng',
+            price: '159.000đ/người'
+        }, {
+            no: 'AK—003',
+            title: 'Bóng đêm lô cao su',
+            desc: 'Lấy bối cảnh vụ án mạng có thật năm 2015 tại Tây Ninh, trò chơi đưa bạn vào cuộc đối chất sinh tử giữa 4 nghi phạm mang đầy mâu thuẫn tiền bạc và tình cảm với nạn nhân. Ai đang che giấu bí mật đen tối? Ai mới là hung thủ thực sự?',
+            meta: 'Trung bình · 4 người · 2–3 tiếng',
+            price: '159.000đ/người'
+        }, {
+            no: 'AK—004',
+            title: 'Đêm rằm giông bão',
+            desc: 'Đêm rằm tháng Chạp, trận giông bão mù trời cô lập hoàn toàn căn biệt thự cổ kính trên đỉnh Tam Đảo, cũng là lúc Ông Hưng – Chủ tịch Tập đoàn Thế Hưng – bị sát hại dã man trong phòng làm việc khóa trái ở tầng 2. Giữa hiện trường mật thất không vết tích, 5 con người hiện diện đêm đó đều sở hữu động cơ giết người sục sôi, vậy ai mới chính là hung thủ thực sự của vụ án này?',
+            meta: 'Dễ · 5 người · 1–2 tiếng',
+            price: '99.000đ/người'
+        }
+    ];
 
-const drinks = 
-[
-    // ================= CÀ PHÊ =================
-    {
-        id: 1,
-        category: 'Cà phê',
-        name: 'Hồ Sơ Đen',
-        desc: 'Cà phê đen',
-        price: 35000,
-        icon: '☕'
-    },
-    {
-        id: 2,
-        category: 'Cà phê',
-        name: 'Lời Khai Ngọt Ngào',
-        desc: 'Cà phê sữa',
-        price: 40000,
-        icon: '🥛'
-    },
-    {
-        id: 3,
-        category: 'Cà phê',
-        name: 'Lời Khai Nửa Thật',
-        desc: 'Bạc xỉu',
-        price: 40000,
-        icon: '🥛'
-    },
-    {
-        id: 4,
-        category: 'Cà phê',
-        name: 'Dấu Vết Cuối Cùng',
-        desc: 'Cà phê muối',
-        price: 45000,
-        icon: '🧂'
-    },
-    {
-        id: 5,
-        category: 'Cà phê',
-        name: 'Nhân Chứng Câm Lặng',
-        desc: 'Americano',
-        price: 45000,
-        icon: '☕'
-    },
-    {
-        id: 6,
-        category: 'Cà phê',
-        name: 'Kẻ Hai Mặt',
-        desc: 'Latte',
-        price: 45000,
-        icon: '🥤'
-    },
+const drinks =
+    [
+        // ================= CÀ PHÊ =================
+        {
+            id: 1,
+            category: 'Cà phê',
+            name: 'Hồ Sơ Đen',
+            desc: 'Cà phê đen',
+            price: 35000,
+            icon: '☕'
+        },
+        {
+            id: 2,
+            category: 'Cà phê',
+            name: 'Lời Khai Ngọt Ngào',
+            desc: 'Cà phê sữa',
+            price: 40000,
+            icon: '🥛'
+        },
+        {
+            id: 3,
+            category: 'Cà phê',
+            name: 'Lời Khai Nửa Thật',
+            desc: 'Bạc xỉu',
+            price: 40000,
+            icon: '🥛'
+        },
+        {
+            id: 4,
+            category: 'Cà phê',
+            name: 'Dấu Vết Cuối Cùng',
+            desc: 'Cà phê muối',
+            price: 50000,
+            icon: '🧂'
+        },
+        {
+            id: 5,
+            category: 'Cà phê',
+            name: 'Nhân Chứng Câm Lặng',
+            desc: 'Americano',
+            price: 45000,
+            icon: '☕'
+        },
+        {
+            id: 6,
+            category: 'Cà phê',
+            name: 'Kẻ Hai Mặt',
+            desc: 'Latte',
+            price: 45000,
+            icon: '🥤'
+        },
 
-    // ================= TRÀ SỮA =================
-    {
-        id: 7,
-        category: 'Trà sữa',
-        name: 'Lời Khai Ban Đầu',
-        desc: 'Trà sữa Ẩn Ký',
-        price: 45000,
-        icon: '🧋'
-    },
-    {
-        id: 8,
-        category: 'Trà sữa',
-        name: 'Bí Mật Hắc Ám',
-        desc: 'Trà sữa socola',
-        price: 45000,
-        icon: '🍫'
-    },
-    {
-        id: 9,
-        category: 'Trà sữa',
-        name: 'Mật Mã Hoa Hồng(Signature)',
-        desc: 'Trà sữa hoa hồng',
-        price: 55000,
-        icon: '🌹'
-    },
-    {
-        id: 10,
-        category: 'Trà sữa',
-        name: 'Lớp Mặt Nạ',
-        desc: 'Trà sữa ngô chiên kem cheese',
-        price: 55000,
-        icon: '🧀'
-    },
-    {
-        id: 11,
-        category: 'Trà sữa',
-        name: 'Mắt Quỷ(Signature)',
-        desc: 'Trà sữa bóng đêm',
-        price: 55000,
-        icon: '🌑'
-    },
-    {
-        id: 12,
-        category: 'Trà sữa',
-        name: 'Cuộc Gọi Nặc Danh(Signature)',
-        desc: 'Dừa hoa hồng',
-        price: 55000,
-        icon: '🥥'
-    },
+        // ================= TRÀ SỮA =================
+        {
+            id: 7,
+            category: 'Trà sữa',
+            name: 'Lời Khai Ban Đầu',
+            desc: 'Trà sữa Ẩn Ký',
+            price: 50000,
+            icon: '🧋'
+        },
+        {
+            id: 8,
+            category: 'Trà sữa',
+            name: 'Bí Mật Hắc Ám',
+            desc: 'Trà sữa socola',
+            price: 50000,
+            icon: '🍫'
+        },
+        {
+            id: 9,
+            category: 'Trà sữa',
+            name: 'Mật Mã Hoa Hồng(Signature)',
+            desc: 'Trà sữa hoa hồng',
+            price: 55000,
+            icon: '🌹'
+        },
+        {
+            id: 10,
+            category: 'Trà sữa',
+            name: 'Lớp Mặt Nạ',
+            desc: 'Trà sữa ngô chiên kem cheese',
+            price: 55000,
+            icon: '🧀'
+        },
+        {
+            id: 11,
+            category: 'Trà sữa',
+            name: 'Mắt Quỷ(Signature)',
+            desc: 'Trà sữa bóng đêm',
+            price: 55000,
+            icon: '🌑'
+        },
+        {
+            id: 12,
+            category: 'Trà sữa',
+            name: 'Cuộc Gọi Nặc Danh(Signature)',
+            desc: 'Dừa hoa hồng',
+            price: 55000,
+            icon: '🥥'
+        },
 
-    // ================= TRÀ TRÁI CÂY =================
-    {
-        id: 13,
-        category: 'Trà trái cây',
-        name: 'Án Mạng Hoàng Hôn',
-        desc: 'Trà xoài chanh leo',
-        price: 50000,
-        icon: '🥭'
-    },
-    {
-        id: 14,
-        category: 'Trà trái cây',
-        name: 'Hung Khí(Signature)',
-        desc: 'Trà hồng thạch',
-        price: 55000,
-        icon: '🫖'
-    },
-    {
-        id: 15,
-        category: 'Trà trái cây',
-        name: 'Chứng Cứ Ngoại Phạm(Signature)',
-        desc: 'Trà sấu muối ớt',
-        price: 50000,
-        icon: '🌶️'
-    },
-    {
-        id: 16,
-        category: 'Trà trái cây',
-        name: 'Khẩu Cung',
-        desc: 'Trà mãng cầu',
-        price: 50000,
-        icon: '🍈'
-    },
-    {
-        id: 17,
-        category: 'Trà trái cây',
-        name: 'Dấu Vân Tay',
-        desc: 'Trà măng cụt',
-        price: 50000,
-        icon: '🍇'
-    },
-    {
-        id: 18,
-        category: 'Trà trái cây',
-        name: 'Vùng Cấm(Signature)',
-        desc: 'Hồng tắc lắc',
-        price: 50000,
-        icon: '🍊'
-    },
+        // ================= TRÀ TRÁI CÂY =================
+        {
+            id: 13,
+            category: 'Trà trái cây',
+            name: 'Án Mạng Hoàng Hôn',
+            desc: 'Trà xoài chanh leo',
+            price: 50000,
+            icon: '🥭'
+        },
+        {
+            id: 14,
+            category: 'Trà trái cây',
+            name: 'Hung Khí(Signature)',
+            desc: 'Trà hồng thạch',
+            price: 55000,
+            icon: '🫖'
+        },
+        {
+            id: 15,
+            category: 'Trà trái cây',
+            name: 'Chứng Cứ Ngoại Phạm(Signature)',
+            desc: 'Trà sấu muối ớt',
+            price: 50000,
+            icon: '🌶️'
+        },
+        {
+            id: 16,
+            category: 'Trà trái cây',
+            name: 'Khẩu Cung',
+            desc: 'Trà mãng cầu',
+            price: 50000,
+            icon: '🍈'
+        },
+        {
+            id: 17,
+            category: 'Trà trái cây',
+            name: 'Dấu Vân Tay',
+            desc: 'Trà măng cụt',
+            price: 50000,
+            icon: '🍇'
+        },
+        {
+            id: 18,
+            category: 'Trà trái cây',
+            name: 'Vùng Cấm(Signature)',
+            desc: 'Hồng tắc lắc',
+            price: 50000,
+            icon: '🍊'
+        },
 
-    // ================= SODA =================
-    {
-        id: 19,
-        category: 'Soda',
-        name: 'Tang Chứng',
-        desc: 'Soda vỏ cam chanh dây',
-        price: 50000,
-        icon: '🍹'
-    },
-    {
-        id: 20,
-        category: 'Soda',
-        name: 'Đồng Phạm',
-        desc: 'Soda chanh muối',
-        price: 50000,
-        icon: '🍋'
-    },
-    {
-        id: 21,
-        category: 'Soda',
-        name: 'Manh Mối Giả',
-        desc: 'Soda việt quất',
-        price: 50000,
-        icon: '🫐'
-    },
-    {
-        id: 22,
-        category: 'Soda',
-        name: 'Nhân Chứng Đỏ',
-        desc: 'Soda dâu',
-        price: 50000,
-        icon: '🍓'
-    },
-    {
-        id: 23,
-        category: 'Soda',
-        name: 'Hiện Trường Vụ Án',
-        desc: 'Soda chanh dây',
-        price: 50000,
-        icon: '🍹'
-    },
-    {
-        id: 24,
-        category: 'Soda',
-        name: 'Kẻ Đứng Sau',
-        desc: 'Soda xoài',
-        price: 50000,
-        icon: '🥭'
-    }
-];
+        // ================= ĐỒ ĂN VẶT =================
+        {
+            id: 19,
+            category: 'Đồ ăn vặt',
+            name: 'Hạt Hướng Dương',
+            desc: 'Hạt hướng dương',
+            price: 20000,
+            icon: '🌻'
+        },
+        {
+            id: 20,
+            category: 'Đồ ăn vặt',
+            name: 'Khô Bò',
+            desc: 'Khô bò',
+            price: 25000,
+            icon: '🥩'
+        },
+        {
+            id: 21,
+            category: 'Đồ ăn vặt',
+            name: 'Khô Gà',
+            desc: 'Khô gà',
+            price: 25000,
+            icon: '🍗'
+        },
+        {
+            id: 22,
+            category: 'Đồ ăn vặt',
+            name: 'Snacks',
+            desc: 'Đồ ăn nhẹ',
+            price: 15000,
+            icon: '🍿'
+        }
+    ];
 
 let cart = {};
 let activeCase = 0;
 const fmt = n => new Intl.NumberFormat('vi-VN').format(n) + 'đ';
 const menuGrid = document.getElementById('menuGrid');
 const categories = [...new Set(drinks.map(d => d.category))];
-menuGrid.innerHTML = categories.map(category => `<section class="menu-category"><h3 class="menu-category-title">${category}</h3><div class="menu-category-grid">${drinks.filter(d=>d.category===category).map(d=>`<article class="drink"><div class="drink-icon">${d.icon}</div><div class="drink-info"><h3>${d.name}</h3><p>${d.desc}</p><div class="drink-bottom"><span class="drink-price">${fmt(d.price)}</span><button class="add" data-add="${d.id}" aria-label="Thêm ${d.name}">+</button></div></div></article>`).join('')}</div></section>`).join('');
+menuGrid.innerHTML = categories.map(category => `<section class="menu-category"><h3 class="menu-category-title">${category}</h3><div class="menu-category-grid">${drinks.filter(d => d.category === category).map(d => `<article class="drink"><div class="drink-icon">${d.icon}</div><div class="drink-info"><h3>${d.name}</h3><p>${d.desc}</p><div class="drink-bottom"><span class="drink-price">${fmt(d.price)}</span><button class="add" data-add="${d.id}" aria-label="Thêm ${d.name}">+</button></div></div></article>`).join('')}</div></section>`).join('');
 
 function toast(msg) {
     const t = document.getElementById('toast');
