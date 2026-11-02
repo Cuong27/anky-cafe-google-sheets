@@ -5,25 +5,48 @@ const cases =
             title: 'Vũ điệu dưới trăng',
             desc: 'Năm 2005, tại bản Nà Pha hẻo lánh thuộc vùng núi Lào Cai, sự mất tích bí ẩn của một cô gái vào đêm trăng sáng đã kéo theo những bí mật bị chôn giấu suốt nhiều năm. Giữa những lời đồn về hồ thiêng và những mối quan hệ đầy toan tính, liệu ai đang nói thật, ai đang che giấu tội lỗi, và sự thật nào sẽ được phơi bày?',
             meta: 'Khó · 5 người · 3–4 tiếng',
-            price: '199.000đ/người'
-        }, {
+            price: '259.000đ/người'
+        }, 
+        
+        {
             no: 'AK—002',
             title: 'Vết cắn lúc nửa đêm',
             desc: 'Giữa những màn hù dọa và hàng loạt bí mật ngoại tình, lừa tiền, thù hận dần bị phơi bày, ai mới là hung thủ thực sự đằng sau?',
             meta: 'Trung bình · 6 người · 2–3 tiếng',
             price: '159.000đ/người'
-        }, {
+        }, 
+        
+        {
             no: 'AK—003',
             title: 'Bóng đêm lô cao su',
             desc: 'Lấy bối cảnh vụ án mạng có thật năm 2015 tại Tây Ninh, trò chơi đưa bạn vào cuộc đối chất sinh tử giữa 4 nghi phạm mang đầy mâu thuẫn tiền bạc và tình cảm với nạn nhân. Ai đang che giấu bí mật đen tối? Ai mới là hung thủ thực sự?',
             meta: 'Trung bình · 4 người · 2–3 tiếng',
-            price: '159.000đ/người'
-        }, {
+            price: '199.000đ/người'
+        }, 
+        
+        {
             no: 'AK—004',
             title: 'Đêm rằm giông bão',
             desc: 'Đêm rằm tháng Chạp, trận giông bão mù trời cô lập hoàn toàn căn biệt thự cổ kính trên đỉnh Tam Đảo, cũng là lúc Ông Hưng – Chủ tịch Tập đoàn Thế Hưng – bị sát hại dã man trong phòng làm việc khóa trái ở tầng 2. Giữa hiện trường mật thất không vết tích, 5 con người hiện diện đêm đó đều sở hữu động cơ giết người sục sôi, vậy ai mới chính là hung thủ thực sự của vụ án này?',
             meta: 'Dễ · 5 người · 1–2 tiếng',
-            price: '99.000đ/người'
+            price: '179.000đ/người'
+        },
+
+        {
+            no: 'AK—005',
+            title: 'Vết máu dưới ráng chiều',
+            desc: 'Giết người, cướp của.',
+            meta: 'Dễ · 5 người · 4–5 tiếng',
+            price: '259.000đ/người'
+        },
+
+
+        {
+            no: 'AK—006',
+            title: 'Bản di chúc phủ họ Hứa',
+            desc: 'Đêm mưa ngâu năm 1965, một thi thể cháy sém được tìm thấy trong thư phòng khóa kín của phủ họ Hứa. Tưởng chừng chỉ là một vụ án mạng vì tiền tài, nhưng đằng sau bản di chúc bí ẩn lại là những bí mật bị chôn vùi và một bi kịch máu mủ khiến không ai dám tin vào sự thật…',
+            meta: 'Dễ · 5 người · 2–3 tiếng',
+            price: '199.000đ/người'
         }
     ];
 
@@ -120,18 +143,9 @@ const drinks =
             price: 55000,
             icon: '🌑'
         },
-        {
-            id: 12,
-            category: 'Trà sữa',
-            name: 'Cuộc Gọi Nặc Danh(Signature)',
-            desc: 'Dừa hoa hồng',
-            price: 55000,
-            icon: '🥥'
-        },
-
         // ================= TRÀ TRÁI CÂY =================
         {
-            id: 13,
+            id: 12,
             category: 'Trà trái cây',
             name: 'Án Mạng Hoàng Hôn',
             desc: 'Trà xoài chanh leo',
@@ -139,7 +153,7 @@ const drinks =
             icon: '🥭'
         },
         {
-            id: 14,
+            id: 13,
             category: 'Trà trái cây',
             name: 'Hung Khí(Signature)',
             desc: 'Trà hồng thạch',
@@ -147,7 +161,7 @@ const drinks =
             icon: '🫖'
         },
         {
-            id: 15,
+            id: 14,
             category: 'Trà trái cây',
             name: 'Chứng Cứ Ngoại Phạm(Signature)',
             desc: 'Trà sấu muối ớt',
@@ -155,7 +169,7 @@ const drinks =
             icon: '🌶️'
         },
         {
-            id: 16,
+            id: 15,
             category: 'Trà trái cây',
             name: 'Khẩu Cung',
             desc: 'Trà mãng cầu',
@@ -163,7 +177,7 @@ const drinks =
             icon: '🍈'
         },
         {
-            id: 17,
+            id: 16,
             category: 'Trà trái cây',
             name: 'Dấu Vân Tay',
             desc: 'Trà măng cụt',
@@ -171,7 +185,7 @@ const drinks =
             icon: '🍇'
         },
         {
-            id: 18,
+            id: 17,
             category: 'Trà trái cây',
             name: 'Vùng Cấm(Signature)',
             desc: 'Hồng tắc lắc',
@@ -181,7 +195,7 @@ const drinks =
 
         // ================= ĐỒ ĂN VẶT =================
         {
-            id: 19,
+            id: 18,
             category: 'Đồ ăn vặt',
             name: 'Hạt Hướng Dương',
             desc: 'Hạt hướng dương',
@@ -189,7 +203,7 @@ const drinks =
             icon: '🌻'
         },
         {
-            id: 20,
+            id: 19,
             category: 'Đồ ăn vặt',
             name: 'Khô Bò',
             desc: 'Khô bò',
@@ -197,7 +211,7 @@ const drinks =
             icon: '🥩'
         },
         {
-            id: 21,
+            id: 20,
             category: 'Đồ ăn vặt',
             name: 'Khô Gà',
             desc: 'Khô gà',
@@ -205,7 +219,7 @@ const drinks =
             icon: '🍗'
         },
         {
-            id: 22,
+            id: 21,
             category: 'Đồ ăn vặt',
             name: 'Snacks',
             desc: 'Đồ ăn nhẹ',
