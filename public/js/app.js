@@ -35,7 +35,7 @@ const cases =
         {
             no: 'AK—005',
             title: 'Vết máu dưới ráng chiều',
-            desc: 'Giết người, cướp của.',
+            desc: 'Năm 1980, tại vùng quê nghèo Tân Minh, tiếng la thất thanh từ một chuyến xe đò đã xé toạc màn sương chạng vạng. Ven con đường quốc lộ vắng, thi thể của một người đàn bà góa chồng được phát hiện với 14 nhát chém oan nghiệt. Toàn bộ tiền mặt và những chiếc nhẫn vàng mang theo đã bốc hơi không để lại dấu vết. Ai là kẻ đã vung lưỡi rựa dưới ráng chiều rực đỏ?',
             meta: 'Dễ · 5 người · 4–5 tiếng',
             price: '259.000đ/người'
         },
@@ -47,7 +47,16 @@ const cases =
             desc: 'Đêm mưa ngâu năm 1965, một thi thể cháy sém được tìm thấy trong thư phòng khóa kín của phủ họ Hứa. Tưởng chừng chỉ là một vụ án mạng vì tiền tài, nhưng đằng sau bản di chúc bí ẩn lại là những bí mật bị chôn vùi và một bi kịch máu mủ khiến không ai dám tin vào sự thật…',
             meta: 'Dễ · 5 người · 2–3 tiếng',
             price: '199.000đ/người'
+        },
+
+        {
+            no: 'AK—007',
+            title: 'Đất máu',
+            desc: 'Câu chuyện diễn ra vào thời bao cấp, tại làng Vọng Sơn, một ngôi làng có khu dân cư sống nhờ núi rừng, chỉ có duy nhất một cửa hàng buôn bán nhỏ, ao cá và khu mộ nằm phía núi. Người dân sống gần gũi, chuyện của một gia đình thường trở thành đề tài bàn tán của cả làng. Tất cả những sự kiện li kì liên tiếp xảy ra sau khi tin di dời dân lên trấn',
+            meta: 'Dễ · 5 người · 3–4 tiếng',
+            price: '179.000đ/người'
         }
+
     ];
 
 const drinks =
